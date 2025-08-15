@@ -178,9 +178,7 @@ You can also modify source (not included here) in order to allow [Force Get](htt
 
 ---
 
-**When configuring a proxy for evilginx:**
-
-To [configure a proxy for evilginx](https://help.evilginx.com/community/guides/proxy) type: `help proxy`
+**[Configure a proxy for evilginx](https://help.evilginx.com/community/guides/proxy)**
 
 **[Low fraud score is not bullshit](https://www.blackhatworld.com/seo/low-fraud-score-proxies.1490657/post-16304635).**
 
