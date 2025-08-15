@@ -48,6 +48,13 @@ It may send collected data to external URLs (block them if needed) and might com
 
   - {triggers_on: '', orig_sub: '', domain: '', search: '([A-Za-z0-9._]+)*location(\\.href|\\.hostname|\\.origin|\\.host|\\.domain|\\.toString|\\.site)([ ]*[;)],}|\n])', replace: '${1}location${2}.replace("phishdomain.com", "legit.domain.com")${3}', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
 
+  - {triggers_on: '', orig_sub: '', domain: '', search: '(top|window|document|self)\\.domain', replace: 'location.hostname.replace("phish.com", "legit.site.com")', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'application/json', 'image/svg+xml', 'text/plain', 'font/woff2', 'charset=utf-8']}
+
+  - {triggers_on: '', orig_sub: '', domain: '', search: '(top|window|document|self)\\.URL', replace: 'location.href.replace("phish.com", "legit.site.com")', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'application/json', 'image/svg+xml', 'text/plain', 'font/woff2', 'charset=utf-8']}
+
+## If no `<base>` tag with an external URL is present in the Elements tab, the base URI defaults to the current hostname in the address bar.
+  - {triggers_on: '', orig_sub: '', domain: '', search: '(top|window|document|self)\\.baseURI([\s]*[;)],}|\n])', replace: '${1}.baseURI.replace("phish.com", "legit.site.com")${2}', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'application/json', 'image/svg+xml', 'text/plain', 'font/woff2', 'charset=utf-8']}
+
   - {triggers_on: '', orig_sub: '', domain: '', search: '\\(window\\.location(\\.href|\\.hostname|\\.origin|\\.host|\\.domain|\\.toString|\\.site)([\s]+)*===([\s]+)*'phishdomain\\.com'\\)', replace: '(window.location${1}${2}===${3}'legit.domain.com')', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
 ```
 
