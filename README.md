@@ -2,6 +2,9 @@
 
 ➺ Only create proxy hosts for traffic whose responses contain your target's hostname. For example, if targeting Microsoft, proxy only traffic with Microsoft hostnames in the response (response body, headers); ignore traffic that does not contain Microsoft hostnames in the response.
 
+➺ Always check for Glassbox network traffic when reverse proxying — it’s a security tool.
+It may send collected data to external URLs (block them if needed) and might compare the DOM to a static version.
+
 ➺ I have seen people setting up `phish_sub` with the same pattern as `orig_sub`, (e.g. `phish_sub: 'secure', orig_sub: 'secure'`) don't do that!.
 
 ➺ Set up DNS A records `@` AND `*` pointing to you VPS IP.
@@ -166,6 +169,12 @@ sed -i '/^const (/ { :a; N; /\n)$/!ba; /HOME_DIR = ".evilginx"/ s/^\(.*\)$/\/\/\
 
 ```
 sed -i 's_proxyHeaders := \[\]string{\"_&CF-Connecting-IP\", \"_' evilginx2/core/http_proxy.go
+```
+
+**Remove [detectable cookie dash](https://github.com/An0nUD4Y/Evilginx-Phishing-Infra-Setup/blob/main/README.md?plain=1#L259)**
+
+```
+sed -i '/s_hash = s_hash\[:4\] + "-" + s_hash\[4:\]/d' evilginx2/core/http_proxy.go
 ```
 
 **Optionally, add these functionalities (very useful):**
