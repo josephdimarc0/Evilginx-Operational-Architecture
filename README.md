@@ -262,15 +262,15 @@ blacklist unauth
 ```
 ---
 
-Sources:
+**SOURCES:**
 
-GOOD OPSEC
+_GOOD OPSEC_
 
 https://www.syonsecurity.com/post/protecting-evilginx3
 https://hackyourmom.com/en/osvita/yak-proksyruvaty-zyednannya-mizh-korystuvachem-i-czilovym-vebserverom/
 https://zolder.io/blog/phishing-for-refresh-tokens/
 
-USING REDIRECTOR!
+_USING REDIRECTOR!_
 
 https://fluxxset.com/t/evilginx-template-and-redirector/907/4
 https://fluxxset.com/t/cloudflare-authentication-needed/1226/12
@@ -283,14 +283,14 @@ https://github.com/fin3ss3g0d/evilgophish/blob/main/evilginx3/templates/turnstil
 https://github.com/fin3ss3g0d/evilgophish/blob/main/README.md#cloudflare-turnstile-setup
 https://fin3ss3g0d.net/index.php/2024/04/08/evilgophishs-approach-to-advanced-bot-detection-with-cloudflare-turnstile/
 
-TLS (WILDCARD) TUTORIALS
+_TLS (WILDCARD) TUTORIALS_
 
 https://breakdev.org/evilginx-3-3-go-phish/
 https://x.com/mrgretzky/status/1763584080245887320?lang=en
 https://github.com/kgretzky/evilginx2/commit/3b0f5c9971bf1041acc88d1b6ffcb9a5203f261c#diff-ecec88c33adb7591ee6aa88e29b62ad52ef443611cba5e0f0ecac9b5725afdbaR2
 https://www.youtube.com/watch?v=zp3u3xSuCpQ&t=254s
 
-BLACKLIST:
+_BLACKLIST_
 
 https://github.com/aalex954/MSFT-IP-Tracker/releases/latest/download/msft_asn_ip_ranges.txt
 https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7
@@ -298,19 +298,19 @@ https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-r
 https://github.com/aalex954/evilginx2-TTPs/blob/master/Custom/blacklist.txt
 https://github.com/mromk94/evilginx_modified_telegram_notifications/commit/261a0489a5820259c15c4403ba3b0acc2c922416
 
-.YAML
+_YAML_
 
 https://github.com/t3hbb/citrixphishlet/blob/main/NewCitrix.yaml
 https://github.com/hidden9090/evilginx/blob/main/paypal.yaml
 https://github.com/McClew/phishlets/blob/main/datto-portal.yaml
 https://github.com/cybersecurityteampk/evilginx3-phishlets-2025/blob/main/chase.yaml
 
-FIRST TWO TUTORIALS
+_FIRST TWO TUTORIALS_
 
 https://www.youtube.com/watch?v=IdVvpDDhdfo
 https://www.youtube.com/watch?v=z5gLXmXIyH8
 
-DREAD
+_DREAD_
 
 http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad[.]onion/search/?p=3&q=phishlet&fuzziness=auto
 http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad[.]onion/post/dbb965bd101be7573793/#c-cb9a6ed45a7d732089
@@ -321,29 +321,29 @@ http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad[.]onion/post/9cb
 http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad[.]onion/post/bb2d243c29b4d00dd336/#c-7164359ec634796951
 http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad[.]onion/u/jokali
 
-CUSTOM PHISHLET TUTORIAL
+_CUSTOM PHISHLET TUTORIAL_
 
 https://www.youtube.com/watch?v=Evc7C1sGujw
 
-CDN
+_CDN_
 
 https://www.cloudcook.ch/set-up-your-own-evilginx-proxy/
 https://stevesec.com/?p=76
 
-EXTRA OPSEC
+_EXTRA OPSEC_
 
 https://www.reddit.com/r/redteamsec/comments/1hrzywl/evilginx_detection/
 https://github.com/aalex954/evilginx2-TTPs
 
-PHISHLETS OFFICIAL DOCUMENTATION
+_PHISHLETS OFFICIAL DOCUMENTATION_
 
 https://help.evilginx.com/community/phishlet-format#auth_tokens
 
-DECRYPT ENCRYPTED PASSWORDS "Getting the master password"
+_DECRYPT ENCRYPTED PASSWORDS "Getting the master password"_
 
 https://pberba.github.io/security/2020/05/28/lastpass-phishing/
 
-SETUP
+_SETUP_
 
 https://github.com/undertheme/evilginx
 https://www.youtube.com/watch?v=m2xFl1Krspo
@@ -359,17 +359,17 @@ https://bleekseeks.com/blog/evilnginx-bypassing-mfa-phishing-is-back-on-the-menu
 https://breakdev.org/evilginx-3-3-go-phish/
 https://fluxxset.com/t/my-phishlets-keeps-getting-flagged/1341
 
-OBFUSCATION
+_OBFUSCATION_
 
 https://www.r-tec.net/r-tec-blog-evade-signature-based-phishing-detections.html
 https://github.com/BinBashBanana/html-obfuscator
 
 
-FLUXXSET METHODS (DEBUGGING)
+_FLUXXSET METHODS (DEBUGGING)_
 
 https://fluxxset.com/t/why-do-my-lure-gets-red-after-building/1162/2
 
-BIG CHATTING (co=) CAPTHA EXPLANATION (url path rewriting)
+_BIG CHATTING (co=) CAPTHA EXPLANATION (url path rewriting)_
 
 http://fluxxset.com/t/i-have-issues-trying-to-to-sur-pass-this-captcha-part-in-my-yahoo-phishlet/141/19
 https://fluxxset.com/t/i-have-issues-trying-to-to-sur-pass-this-captcha-part-in-my-yahoo-phishlet/141
@@ -377,26 +377,26 @@ https://github.com/An0nUD4Y/Evilginx2-Phishlets#securing-evilginx-infra-tips
 https://research.aurainfosec.io/pentest/hook-line-and-phishlet/
 https://www.reddit.com/search/?q=evilginx&cId=6bee20fd-0522-4f79-8e4e-27eb38325b27&iId=1fa0ca77-9565-4fd2-97ae-90999bf65258
 
-VERY USEFUL BLOGS
+_VERY USEFUL BLOGS_
 
 https://insights.spotit.be/2024/06/03/clipping-the-canarys-wings-bypassing-aitm-phishing-detections/#Using-Content-Security-Policies-to-our-advantage
 https://insights.spotit.be/2024/06/03/clipping-the-canarys-wings-bypassing-aitm-phishing-detections/#conclusion
 https://www.riskinsight-wavestone.com/en/2025/07/phishing-pushing-evilginx-to-its-limit/
 https://medium.com/@yudasm/bypassing-windows-hello-for-business-for-phishing-181f2271dc02
 
-THE IMPORTANCE OF TLS (WILDCARD CERTIFICATES)
+_THE IMPORTANCE OF TLS (WILDCARD CERTIFICATES)_
 
 https://fluxxset.com/t/my-phishlets-keeps-getting-flagged/1341/2
 
-REGEXP
+_REGEXP_
 
 https://github.com/kgretzky/evilginx2/wiki/Phishlet-File-Format-(2.3.0)
 
-`intercept:` IN PHISHLETS
+_`intercept:` IN PHISHLETS_
 
 https://breakdev.org/evilginx-3-2/
 
-JS_INJECT
+_JS_INJECT_
 
 Prefill via `js_inject`
 https://www.youtube.com/watch?v=-viRYmdb7mc
@@ -407,29 +407,29 @@ https://fluxxset.com/t/cors-headers-request-blocked/275
 https://fluxxset.com/t/content-security-policies-on-ste/1041/4
 https://fluxxset.com/t/evilginx-and-cors/1053
 
-BLOCK SUSPICIOUS USER AGENT
+_BLOCK SUSPICIOUS USER AGENT_
 
 https://github.com/mthcht/awesome-lists/blob/main/Lists/suspicious_http_user_agents_list.csv
 
-JWT TOKENS (my friend there haha!)
+_JWT TOKENS (my friend there haha!)_
 
 https://fluxxset.com/t/jtw-tokens-explained/53XSR2
 
-UBUNTU ERROR
+_UBUNTU ERROR_
 
 https://uberzachattack.xyz/posts/evilginx-mastery-review/
 
-VPS ADVANCED SETUP
+_VPS ADVANCED SETUP_
 
 https://gist.github.com/dunderhay/d5fcded54cc88a1b7e12599839b6badb
 
-OVERWRITE HEADERS
+_OVERWRITE HEADERS_
 
 https://github.com/kgretzky/evilginx2/pull/1006
 https://github.com/kgretzky/evilginx2/pull/1006/commits/d88b98c0d31ce662809797d0942bab101a18270d
 https://insights.spotit.be/2024/06/03/clipping-the-canarys-wings-bypassing-aitm-phishing-detections/#No-Referrer-Pretty-please
 
-FORCE GET AND FORCE POST
+_FORCE GET AND FORCE POST_
 
 https://www.obsidiansecurity.com/blog/demystifying-okta-aitm
 https://github.com/kgretzky/evilginx2/pull/1163
