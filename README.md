@@ -33,9 +33,9 @@
 **These subfilters are a must:**
 
 ```
-  - {triggers_on: '', orig_sub: '', domain: '', search: '\\\\((["'])integrity(["']),.*\\\\)', replace: '(${1}integrity${2})', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
+  - {triggers_on: '', orig_sub: '', domain: '', search: '\\((["'])integrity(["']),.*\\)', replace: '(${1}integrity${2})', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
 
-  - {triggers_on: '', orig_sub: '', domain: '', search: '\\\\((["'])crossorigin(["']),.*\\\\)', replace: '(${1}crossorigin${2})', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
+  - {triggers_on: '', orig_sub: '', domain: '', search: '\\((["'])crossorigin(["']),.*\\)', replace: '(${1}crossorigin${2})', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
 
   - {triggers_on: '', orig_sub: '', domain: '', search: 'crossorigin=(["']).*(["']), replace: 'crossorigin=${1}${2}', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
 
