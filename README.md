@@ -23,6 +23,8 @@ It may send collected data to external URLs (block them if needed) and might com
 
 ➺ Remember that `key: ''` parameter is not valid when capturing `json` tokens, [see documentation](https://help.evilginx.com/community/phishlet-format#json-example).
 
+➺ Make sure the “phishlet name” matches with the exact same name in the yaml file[.](http://fluxxset.com/t/office-365-email-invalid-issue/1122/10)
+
 ➺ Using a CDN for email sendouts will significantly reduce email scanner detection!.
 
 ➺ [OpenGraph](https://help.evilginx.com/community/guides/lures#opengraph) makes phishing more credible, an email with embedded images increases its fraudscore... Instead you can use opengraph, reduce fraudscore and make it more believable, be creative.
