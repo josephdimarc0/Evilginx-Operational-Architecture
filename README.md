@@ -210,6 +210,28 @@ If it is 0.1 its because the IP has been blacklisted as Botted Recently.
 
 Cheers!
 
+Always use this before entering your captured session:
+
+```
+sudo iptables -A OUTPUT -p udp --dport 443 -j REJECT
+sudo iptables -P OUTPUT DROP
+sudo iptables -A OUTPUT -o lo -j ACCEPT
+sudo iptables -A OUTPUT -d <PROXY IP> -p tcp --dport <PROXY PORT> -j ACCEPT
+sudo iptables -A OUTPUT -p udp -d 127.0.0.1 --dport 53 -j ACCEPT
+dns2socks <PROXY IP>:$<PROXY PORT> 8.8.8.8:53 127.0.0.1:53 &
+```
+
+You can undo it with this:
+
+```
+sudo iptables -F
+sudo iptables -t nat -F
+sudo iptables -t mangle -F
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+```
+
 ---
 
 **This is my personal workflow:**
