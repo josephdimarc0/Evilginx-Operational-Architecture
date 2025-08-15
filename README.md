@@ -51,6 +51,12 @@ It may send collected data to external URLs (block them if needed) and might com
 
 ➺ if you already have `auto_filter: true`, it's not necessary to rewrite hostnames with subfilters, unless they look like `<legitsite>.com` or `legitsite\.com` (with hardcoded literal backslash)
 
+**This is a poweful subfilter designed to rewrite dynamic base64 encoded hostnames with static functions:**
+
+```
+- {triggers_on: '', orig_sub: '', domain: '', search: '<FUNCTION NAME HERE>\\((["'])?([a-zA-Z0-9+/=]+)(["'])?\\)', replace: '<FUNCTION NAME HERE>(btoa(atob(${1}${2}${3}).replace(/[a-zA-Z0-9-]+\\.(com|net|org)/g, "phish.com")))', mimes: ['text/javascript', 'application/javascript', 'application/x-javascript', 'text/html', 'application/json', 'image/svg+xml', 'text/plain', 'font/woff2', 'charset=utf-8']}
+```
+
 **These are some keywords related to [Canary](https://insights.spotit.be/2024/06/03/clipping-the-canarys-wings-bypassing-aitm-phishing-detections/) [Tokens](https://nicolasuter.medium.com/aitm-phishing-with-azure-functions-a1530b52df05) and [Redirection](https://www.obsidiansecurity.com/blog/demystifying-okta-aitm) [Urls](https://www.riskinsight-wavestone.com/en/2025/07/phishing-pushing-evilginx-to-its-limit/) you should look out for:**
 
 ```
